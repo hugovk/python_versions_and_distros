@@ -7,7 +7,7 @@ from pathlib import Path
 
 CSV_FIELDNAMES = ['distribution', 'dist_version', 'python_version', 'resource']
 PY_VER_MAP = {py_ver: [f'{py_ver}.{j}' for j in range(15)]
-              for py_ver in ('3.4', '3.5', '3.6', '3.7')
+              for py_ver in ('3.6', '3.7', '3.8', '3.9', '3.10', '3.11')
               }
 DEBUG = False
 USER_AGENT = ('Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) '
@@ -148,7 +148,7 @@ def write_output(dist_json, py_ver):
 
 def print_report():
     """
-    Print to terminal the distributions that have python 3.6
+    Print to terminal the distributions for different Pyton versions
     """
     for py_ver in PY_VER_MAP:
         data_fpath = Path(f"python_distros_{py_ver}.csv")
