@@ -10,8 +10,8 @@ PY_VER_MAP = {py_ver: [f'{py_ver}.{j}' for j in range(15)]
               for py_ver in ('3.4', '3.5', '3.6', '3.7')
               }
 DEBUG = False
-USER_AGENT = ('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 '
-              '(KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
+USER_AGENT = ('Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) '
+              'Gecko/20071127 Firefox/2.0.0.11')
 
 
 def fetch_webpage(source_url, destination_filename):
