@@ -19,6 +19,7 @@ def fetch_webpage(source_url, destination_filename):
     Download <source_url> and save it as <destination_filename>
     """
     r = requests.get(source_url, headers={'User-Agent': USER_AGENT})
+    r.raise_for_status()
     with open(destination_filename, 'w+') as file:
         file.write(r.text)
 
