@@ -60,7 +60,7 @@ def process_distro(distribution):
     """
     with open(f"downloaded_data/{distribution}.html") as file:
         soup = BeautifulSoup(file, "html.parser")
-        th = soup.find_all("th", text="Full Package List")
+        th = soup.find_all("th", string="Full Package List")
         if th:
             for sib in th[0].next_siblings:
                 a_elem = sib.find("a")
